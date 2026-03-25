@@ -59,6 +59,15 @@ const Experience = () => {
                       <span className="text-white font-medium">AI For Everyone</span>
                       <span className="text-sm text-cyan-400">DeepLearning.AI</span>
                     </li>
+                    <li className="flex flex-col">
+                      <span className="text-white font-medium">Pearson MePro Level 10 Expert</span>
+                      <span className="text-sm text-cyan-400">Pearson MePro</span>
+                    </li>
+                    <li className="flex flex-col">
+                      <span className="text-white font-medium">Introduction to MongoDB (For Students)</span>
+                      <span className="text-sm text-cyan-400">MongoDB</span>
+                      <span className="text-xs text-gray-400 mt-1">Issued Sep 2025 • Credential ID MDB1gzbgksjf2</span>
+                    </li>
                   </ul>
                 </div>
               </div>

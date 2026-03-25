@@ -1,27 +1,12 @@
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei';
 import { motion } from 'framer-motion';
+import InteractiveBlob from './InteractiveBlob';
 
 const Hero = () => {
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0">
-        <Canvas>
-          <ambientLight intensity={1} />
-          <directionalLight position={[1, 2, 3]} intensity={2} />
-          <Sphere args={[1, 100, 200]} scale={2.5}>
-            <MeshDistortMaterial
-              color="#0891b2"
-              attach="material"
-              distort={0.4}
-              speed={2}
-              roughness={0.2}
-              metalness={0.8}
-            />
-          </Sphere>
-          <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.5} />
-        </Canvas>
+        <InteractiveBlob />
       </div>
 
       {/* Content */}

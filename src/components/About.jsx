@@ -18,7 +18,7 @@ const About = () => {
             <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-sm">
               <h3 className="text-2xl font-semibold mb-4 text-white">Professional Summary</h3>
               <p className="text-gray-300 leading-relaxed text-lg">
-                AI and Full-Stack Developer with experience building intelligent web applications and data-driven systems. Skilled in Python, JavaScript, and modern ML frameworks for developing predictive models, NLP pipelines, and AI-powered analytics platforms.
+                AI and Full-Stack Developer specializing in building intelligent, scalable web applications and data-driven systems. Proficient in Python and JavaScript, with hands-on experience in machine learning, NLP, and modern AI frameworks to develop predictive models and automated analytics solutions. Adept at integrating AI capabilities into full-stack architectures, delivering end-to-end products that transform data into actionable insights. Passionate about leveraging cutting-edge technologies to solve real-world problems and continuously enhance system performance.
               </p>
             </div>
             
