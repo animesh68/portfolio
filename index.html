@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animesh Srivastava | AI & Full-Stack Developer</title>
+    <meta name="description" content="AI & Full-Stack Developer portfolio themed around Witch Hat Atelier. Discover projects, skills, and experience of Animesh Srivastava.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="parchment-mode">
+
+    <!-- Interactive Spell Drawing Canvas -->
+    <canvas id="magic-canvas"></canvas>
+
+    <!-- Celestial Sparkle Overlay (for dark mode transitions) -->
+    <div id="celestial-overlay"></div>
+
+    <!-- Magic Wand Custom Cursor -->
+    <div class="magic-cursor" id="magic-cursor"></div>
+    <div class="magic-cursor-follower" id="magic-cursor-follower"></div>
+
+    <!-- Background Ambient Dust/Stars -->
+    <div class="ambient-particles" id="ambient-particles"></div>
+
+    <!-- Mode Controller -->
+    <div class="atelier-controls">
+        <button id="mode-toggle" class="control-btn" aria-label="Toggle Mode" title="Toggle Celestial Mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="atelier-header">
+        <div class="logo-container">
+            <h1 class="atelier-logo">WELCOME</h1>
+            <span class="atelier-title">El Psy Congroo</span>
+        </div>
+        <nav class="atelier-nav">
+            <ul>
+                <li><a href="#about" class="nav-link active" data-sound="paper"><span class="nav-rune">ᛟ</span> About</a></li>
+                <li><a href="#projects" class="nav-link" data-sound="paper"><span class="nav-rune">ᛒ</span> Projects</a></li>
+                <li><a href="#skills" class="nav-link" data-sound="paper"><span class="nav-rune">ᛞ</span> Skills</a></li>
+                <li><a href="#experience" class="nav-link" data-sound="paper"><span class="nav-rune">ᚱ</span> Experience</a></li>
+                <li><a href="#contact" class="nav-link" data-sound="paper"><span class="nav-rune">ᚲ</span> Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="grimoire-container">
+
+        <!-- SECTION 1: ABOUT ME -->
+        <section id="about" class="atelier-section">
+            <div class="atelier-grid">
+                <div class="atelier-illustration-container">
+                    <div class="grimoire-frame">
+                        <img src="wizard_apprentice_sketch.jpeg" alt="Animesh Srivastava Sketch" class="atelier-image">
+                        <div class="magic-border-circle"></div>
+                    </div>
+                </div>
+                <div class="atelier-intro">
+                    <div class="apprentice-tag">AI & Full-Stack Developer</div>
+                    <h2 class="spell-title-main">Animesh Srivastava</h2>
+                    <p class="summary-paragraph">
+                        An AI and Full-Stack Developer with experience building intelligent web applications and data-driven systems. Skilled in Python, JavaScript, and modern ML frameworks, I craft predictive models, NLP pipelines, and AI-powered analytics platforms. 
+                    </p>
+                    <p class="lore-paragraph">
+                        "Building robust full-stack applications and intelligent models, translating raw data into predictive, scalable systems."
+                    </p>
+                    
+                    <div class="quick-stats">
+                        <div class="stat-card">
+                            <span class="stat-glyph">✦</span>
+                            <span class="stat-value">2+ Yrs</span>
+                            <span class="stat-label">Experience</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-glyph">✺</span>
+                            <span class="stat-value">3+</span>
+                            <span class="stat-label">Key Projects</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-glyph">✧</span>
+                            <span class="stat-value">200+</span>
+                            <span class="stat-label">Problems Solved</span>
+                        </div>
+                    </div>
+
+                    <div class="cta-container">
+                        <a href="#projects" class="spell-button btn-primary" data-sound="cast">
+                            <span class="btn-glow"></span>
+                            View Projects <i class="fa-solid fa-feather"></i>
+                        </a>
+                        <a href="#contact" class="spell-button btn-secondary" data-sound="wind">
+                            Contact Me <i class="fa-solid fa-paper-plane"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PROJECTS -->
+        <section id="projects" class="atelier-section">
+            <h2 class="section-title"><span class="title-rune">ᛒ</span> Featured Projects <span class="title-sub">Technical Work</span></h2>
+            <p class="section-intro-desc">Hover over the seals to explore technical implementations and outcomes.</p>
+            
+            <div class="projects-grid">
+                
+                <!-- Project 1: Nocturne.ai -->
+                <div class="spell-card" data-spell-type="fire">
+                    <div class="spell-seal-container">
+                        <svg class="spell-seal-svg" viewBox="0 0 100 100">
+                            <!-- Inner and Outer Magic Circles -->
+                            <circle class="ring outer-ring" cx="50" cy="50" r="45"></circle>
+                            <circle class="ring inner-ring" cx="50" cy="50" r="35"></circle>
+                            <path class="rune-path" d="M 50 15 L 80 70 L 20 70 Z"></path>
+                            <circle cx="50" cy="50" r="10" class="core-glow"></circle>
+                        </svg>
+                        <i class="fa-solid fa-chart-line spell-icon"></i>
+                    </div>
+                    <div class="spell-card-body">
+                        <span class="spell-category">AI, Full-Stack, Fintech</span>
+                        <h3>Nocturne.ai</h3>
+                        <span class="spell-subtitle-tech">AI Quant Research Terminal</span>
+                        <ul class="spell-effects">
+                            <li>Architected a fintech analytics platform processing <strong>1,000+ social sentiment signals</strong> for real-time market insights.</li>
+                            <li>Programmed an automated Reddit scraper, analyzing <strong>5,000+ financial discussions</strong>.</li>
+                            <li>Created sentiment trend, mention velocity, and stock prediction dashboards.</li>
+                            <li>Deployed Gemini API and Amazon Nova models to automate ticker-level analysis.</li>
+                        </ul>
+                        <div class="spell-links">
+                            <a href="https://github.com/animesh68" target="_blank" class="rune-link" data-sound="click"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Agentic Workflow -->
+                <div class="spell-card" data-spell-type="wind">
+                    <div class="spell-seal-container">
+                        <svg class="spell-seal-svg" viewBox="0 0 100 100">
+                            <circle class="ring outer-ring" cx="50" cy="50" r="45"></circle>
+                            <circle class="ring inner-ring" cx="50" cy="50" r="32"></circle>
+                            <!-- Wind Glyph Triquetra -->
+                            <path class="rune-path" d="M 50 12 C 65 35 65 65 50 88 C 35 65 35 35 50 12 Z M 15 50 C 40 35 60 35 85 50 C 60 65 40 65 15 50 Z"></path>
+                            <circle cx="50" cy="50" r="8" class="core-glow"></circle>
+                        </svg>
+                        <i class="fa-solid fa-robot spell-icon"></i>
+                    </div>
+                    <div class="spell-card-body">
+                        <span class="spell-category">Python, CrewAI, MCP</span>
+                        <h3>Agentic Workflow</h3>
+                        <span class="spell-subtitle-tech">CrewAI & GitHub MCP Orchestrator</span>
+                        <ul class="spell-effects">
+                            <li>Orchestrated a multi-agent workflow utilizing CrewAI and GitHub MCP servers.</li>
+                            <li>Constructed autonomous agents for repository analysis, issue tracking, and automated pull requests.</li>
+                            <li>Implemented GitHub API integrations to streamline developer operations.</li>
+                            <li>Structured modular communication pipelines for AI-driven developer tooling.</li>
+                        </ul>
+                        <div class="spell-links">
+                            <a href="https://github.com/animesh68" target="_blank" class="rune-link" data-sound="click"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: MLOps Pipeline -->
+                <div class="spell-card" data-spell-type="earth">
+                    <div class="spell-seal-container">
+                        <svg class="spell-seal-svg" viewBox="0 0 100 100">
+                            <circle class="ring outer-ring" cx="50" cy="50" r="45"></circle>
+                            <circle class="ring inner-ring" cx="50" cy="50" r="35"></circle>
+                            <!-- Square for Earth/Stability -->
+                            <rect class="rune-path" x="25" y="25" width="50" height="50" transform="rotate(45 50 50)"></rect>
+                            <circle cx="50" cy="50" r="10" class="core-glow"></circle>
+                        </svg>
+                        <i class="fa-solid fa-server spell-icon"></i>
+                    </div>
+                    <div class="spell-card-body">
+                        <span class="spell-category">Python, Docker, FastAPI, MLflow</span>
+                        <h3>MLOps Pipeline</h3>
+                        <span class="spell-subtitle-tech">ML Deployment Framework</span>
+                        <ul class="spell-effects">
+                            <li>Established end-to-end pipeline for training, tracking, and deploying ML models.</li>
+                            <li>Incorporated MLflow to oversee experiment tracking and model versioning.</li>
+                            <li>Containerized applications using Docker and deployed APIs using FastAPI.</li>
+                            <li>Automated preprocessing and deployment workflows for continuous experiment cycles.</li>
+                        </ul>
+                        <div class="spell-links">
+                            <a href="https://github.com/animesh68" target="_blank" class="rune-link" data-sound="click"><i class="fa-brands fa-github"></i> View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: SKILLS -->
+        <section id="skills" class="atelier-section">
+            <h2 class="section-title"><span class="title-rune">ᛞ</span> Technical Skills <span class="title-sub">Areas of Expertise</span></h2>
+            <p class="section-intro-desc">Hover over nodes to explore tech stack competency.</p>
+            
+            <div class="skills-universe">
+                <!-- Outer planetary rings for skill nodes -->
+                <div class="universe-ring ring-1"></div>
+                <div class="universe-ring ring-2"></div>
+                
+                <div class="skills-grid">
+                    
+                    <!-- Skill Class 1 -->
+                    <div class="skill-sphere" data-skill-type="evocation">
+                        <div class="sphere-seal">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" class="sphere-ring"></circle>
+                                <polygon points="50,15 80,75 20,75" class="sphere-glyph"></polygon>
+                            </svg>
+                            <i class="fa-solid fa-code sphere-icon"></i>
+                        </div>
+                        <h4>Languages</h4>
+                        <span class="skill-desc-tag">Programming Languages</span>
+                        <ul class="skill-nodes-list">
+                            <li>Python <span class="potency">(Pandas, NumPy)</span></li>
+                            <li>SQL <span class="potency">(PostgreSQL, MySQL)</span></li>
+                            <li>JavaScript <span class="potency">(ES6+)</span></li>
+                            <li>Java & C++</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Class 2 -->
+                    <div class="skill-sphere" data-skill-type="scrying">
+                        <div class="sphere-seal">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" class="sphere-ring"></circle>
+                                <circle cx="50" cy="50" r="25" class="sphere-glyph-circle"></circle>
+                                <line x1="50" y1="5" x2="50" y2="95" class="sphere-line"></line>
+                                <line x1="5" y1="50" x2="95" y2="50" class="sphere-line"></line>
+                            </svg>
+                            <i class="fa-solid fa-eye sphere-icon"></i>
+                        </div>
+                        <h4>Data & Analytics</h4>
+                        <span class="skill-desc-tag">Visualization & Analysis</span>
+                        <ul class="skill-nodes-list">
+                            <li>Tableau & Power BI</li>
+                            <li>Excel <span class="potency">(VLOOKUP, Pivot)</span></li>
+                            <li>Scikit-learn</li>
+                            <li>Matplotlib & Seaborn</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Class 3 -->
+                    <div class="skill-sphere" data-skill-type="alchemy">
+                        <div class="sphere-seal">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" class="sphere-ring"></circle>
+                                <path d="M 50 15 L 85 50 L 50 85 L 15 50 Z" class="sphere-glyph"></path>
+                            </svg>
+                            <i class="fa-solid fa-flask sphere-icon"></i>
+                        </div>
+                        <h4>Machine Learning</h4>
+                        <span class="skill-desc-tag">AI & Modeling</span>
+                        <ul class="skill-nodes-list">
+                            <li>TensorFlow & Keras</li>
+                            <li>Natural Language Processing</li>
+                            <li>Computer Vision & CNN</li>
+                            <li>Predictive Modeling</li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Class 4 -->
+                    <div class="skill-sphere" data-skill-type="conjuring">
+                        <div class="sphere-seal">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" class="sphere-ring"></circle>
+                                <circle cx="50" cy="50" r="30" class="sphere-ring inner"></circle>
+                                <path d="M 30 30 L 70 70 M 70 30 L 30 70" class="sphere-glyph-cross"></path>
+                            </svg>
+                            <i class="fa-solid fa-box-open sphere-icon"></i>
+                        </div>
+                        <h4>Tools & Infrastructure</h4>
+                        <span class="skill-desc-tag">Cloud & Development</span>
+                        <ul class="skill-nodes-list">
+                            <li>AWS & Azure</li>
+                            <li>Docker Containers</li>
+                            <li>Hadoop Ecosystem</li>
+                            <li>Git & Linux (Arch)</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: EXPERIENCE & EDUCATION -->
+        <section id="experience" class="atelier-section">
+            <h2 class="section-title"><span class="title-rune">ᚱ</span> Experience & Education <span class="title-sub">Academic & Professional Journey</span></h2>
+            
+            <div class="chronicles-container">
+                <div class="chronicles-line"></div>
+                
+                <!-- Event 1: Deloitte Simulation -->
+                <div class="chronicle-event" data-event-type="job">
+                    <div class="chronicle-marker"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="chronicle-card">
+                        <div class="chronicle-header">
+                            <span class="chronicle-date">Remote Simulation</span>
+                            <h4>Deloitte Australia</h4>
+                            <span class="chronicle-subtitle">Data Analytics Job Simulation (Forage)</span>
+                        </div>
+                        <div class="chronicle-body">
+                            <ul>
+                                <li>Cleaned and transformed <strong>2,000+ records</strong> using SQL and Excel to ensure high data integrity.</li>
+                                <li>Uncovered 3 key business risk areas and presented visual insights to support decision-making.</li>
+                                <li>Developed dashboards that reduced recurring reporting time by <strong>30%</strong> for key stakeholders.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 2: KIET Group of Institutions -->
+                <div class="chronicle-event" data-event-type="edu">
+                    <div class="chronicle-marker"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="chronicle-card">
+                        <div class="chronicle-header">
+                            <span class="chronicle-date">2024 - 2028</span>
+                            <h4>KIET Group of Institutions</h4>
+                            <span class="chronicle-subtitle">B.Tech in Computer Science & Engineering (AI)</span>
+                        </div>
+                        <div class="chronicle-body">
+                            <p>Currently studying advanced AI methodologies, including machine learning algorithms, deep learning foundations, and advanced data structuring. </p>
+                            <span class="chronicle-stat">CGPA: 7.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 3: Oxford Public School -->
+                <div class="chronicle-event" data-event-type="edu">
+                    <div class="chronicle-marker"><i class="fa-solid fa-school"></i></div>
+                    <div class="chronicle-card">
+                        <div class="chronicle-header">
+                            <span class="chronicle-date">2022 - 2024</span>
+                            <h4>Oxford Public School, Gorakhpur</h4>
+                            <span class="chronicle-subtitle">Class XII (CBSE)</span>
+                        </div>
+                        <div class="chronicle-body">
+                            <p>Focused on Science, Mathematics, and Computer Science foundations.</p>
+                            <span class="chronicle-stat">Percentage: 87.8%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 4: Achievements & Leadership -->
+                <div class="chronicle-event" data-event-type="milestone">
+                    <div class="chronicle-marker"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="chronicle-card">
+                        <div class="chronicle-header">
+                            <span class="chronicle-date">Milestones & Leadership</span>
+                            <h4>Achievements & Activities</h4>
+                            <span class="chronicle-subtitle">Extracurricular Roles</span>
+                        </div>
+                        <div class="chronicle-body">
+                            <ul class="achieve-list">
+                                <li><i class="fa-solid fa-check"></i> Solved <strong>200+ Data Structures & Algorithms</strong> problems on LeetCode/GFG.</li>
+                                <li><i class="fa-solid fa-check"></i> Top 15% performer - <strong>KIET MUN UNHRC</strong> (analytical research & policy drafting).</li>
+                                <li><i class="fa-solid fa-check"></i> Marketing Coordinator for <strong>Geek Room, KIET</strong> (social media & event outreach).</li>
+                                <li><i class="fa-solid fa-check"></i> MUN Speaker - KIET MUN Society (debated international data privacy laws).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event 5: Certifications -->
+                <div class="chronicle-event" data-event-type="badge">
+                    <div class="chronicle-marker"><i class="fa-solid fa-award"></i></div>
+                    <div class="chronicle-card">
+                        <div class="chronicle-header">
+                            <span class="chronicle-date">Credentials</span>
+                            <h4>Certifications</h4>
+                            <span class="chronicle-subtitle">Industry Certifications</span>
+                        </div>
+                        <div class="chronicle-body">
+                            <div class="badge-grid">
+                                <div class="badge-item">
+                                    <i class="fa-brands fa-aws badge-icon"></i>
+                                    <span>AWS Certified Cloud Practitioner</span>
+                                </div>
+                                <div class="badge-item">
+                                    <i class="fa-solid fa-calculator badge-icon"></i>
+                                    <span>Data Analytics Bootcamp - Alex The Analyst</span>
+                                </div>
+                                <div class="badge-item">
+                                    <i class="fa-solid fa-brain badge-icon"></i>
+                                    <span>AI For Everyone - DeepLearning.AI</span>
+                                </div>
+                                <div class="badge-item">
+                                    <i class="fa-solid fa-database badge-icon"></i>
+                                    <span>ER Modeling - Infosys Springboard</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 5: CONTACT -->
+        <section id="contact" class="atelier-section">
+            <h2 class="section-title"><span class="title-rune">ᚲ</span> Contact Me <span class="title-sub">Get In Touch</span></h2>
+            
+            <div class="contact-single-container">
+                <div class="owl-info centered-info">
+                    <h3 class="owl-headline">Get in Touch</h3>
+                    <p>Whether you seek to collaborate on full-stack web applications, exchange machine learning patterns, or discuss job opportunities, feel free to reach out directly.</p>
+                    
+                    <div class="social-runes horizontal-runes">
+                        <a href="mailto:animeshyt68@gmail.com" class="social-rune-btn horizontal-btn" title="Email" data-sound="wind">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span class="rune-tag">animeshyt68@gmail.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/animesh-srivastava" target="_blank" class="social-rune-btn horizontal-btn" title="LinkedIn" data-sound="wind">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            <span class="rune-tag">linkedin.com/in/animesh-srivastava</span>
+                        </a>
+                        <a href="https://github.com/animesh68" target="_blank" class="social-rune-btn horizontal-btn" title="GitHub" data-sound="wind">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="rune-tag">github.com/animesh68</span>
+                        </a>
+                        <a href="tel:+919506150136" class="social-rune-btn horizontal-btn" title="Phone" data-sound="wind">
+                            <i class="fa-solid fa-phone"></i>
+                            <span class="rune-tag">+91 9506150136</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive Footer -->
+    <footer class="atelier-footer">
+        <p>&copy; 2026 Animesh Srivastava. Built with web standards, custom code, and creative interfaces.</p>
+        <p class="license-notice">Witch Hat Atelier design inspired by Kamome Shirahama's artwork. All rights reserved.</p>
+    </footer>
+
+    <!-- Custom JavaScript Engine -->
+    <script src="app.js"></script>
+</body>
+</html>
