@@ -1,15 +1,9 @@
-/*
-   Witch Hat Atelier Portfolio Engine
-   Author: Antigravity AI
-   Powers the interactive magic canvas, audio synthesis, and custom navigation
-*/
-
 document.addEventListener('DOMContentLoaded', () => {
-    // --- State Variables ---
-    let soundEnabled = false;
-    let currentMode = 'parchment'; // 'parchment' or 'celestial'
     
-    // --- DOM Elements ---
+    let soundEnabled = false;
+    let currentMode = 'parchment'; 
+    
+
     const body = document.body;
     const canvas = document.getElementById('magic-canvas');
     const ctx = canvas.getContext('2d');
@@ -333,14 +327,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Track mouse speed to spawn particles
+    // Track interaction speed to spawn particles
     let lastX = 0;
     let lastY = 0;
 
-    window.addEventListener('mousemove', (e) => {
-        const dx = e.clientX - lastX;
-        const dy = e.clientY - lastY;
-        const distance = Math.sqrt(dx*dx + dy*dy);
+    function spawnParticles(clientX, clientY) {
+        const dx = clientX - lastX;
+        const dy = clientY - lastY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
         
         // Change stardust color depending on light/dark mode
         const stardustColor = currentMode === 'parchment' 
@@ -348,7 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
             : 'rgba(0, 242, 254, 0.8)';  // Cyan Starlight
 
         if (distance > 2) {
-            // Add mouse trail particles
+            // Add interaction trail particles
             for (let i = 0; i < Math.min(distance / 4, 3); i++) {
                 const px = lastX + (dx * (i / Math.min(distance / 4, 3)));
                 const py = lastY + (dy * (i / Math.min(distance / 4, 3)));
@@ -358,13 +352,30 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Occasional magic circle stamp when moving fast
         if (distance > 45 && Math.random() < 0.1) {
-            magicCircles.push(new MagicCircle(e.clientX, e.clientY, stardustColor));
+            magicCircles.push(new MagicCircle(clientX, clientY, stardustColor));
             if (Math.random() < 0.3) playClickSound();
         }
 
-        lastX = e.clientX;
-        lastY = e.clientY;
+        lastX = clientX;
+        lastY = clientY;
+    }
+
+    window.addEventListener('mousemove', (e) => {
+        spawnParticles(e.clientX, e.clientY);
     });
+
+    window.addEventListener('touchmove', (e) => {
+        if (e.touches.length > 0) {
+            spawnParticles(e.touches[0].clientX, e.touches[0].clientY);
+        }
+    }, { passive: true });
+
+    window.addEventListener('touchstart', (e) => {
+        if (e.touches.length > 0) {
+            lastX = e.touches[0].clientX;
+            lastY = e.touches[0].clientY;
+        }
+    }, { passive: true });
 
     // Clicking generates a spell flash circle
     window.addEventListener('click', (e) => {
